@@ -9,6 +9,7 @@ public class CodeTest {
         //create new instance of class Code
         Code code = new Code();
 
-        assertEquals("Hello world", code.sayHello());
+        assertEquals("Hello world!", code.sayHello());
+        assertEquals(20, code.plusNumber(10, 10));
     }
 }
