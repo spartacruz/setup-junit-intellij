@@ -1,6 +1,8 @@
 public class BankAccount {
     private double balance;
     private double minimumBalance;
+    private boolean isActive = true;
+    private String holderName;
 
     //contractor
     public BankAccount(double balance, double minimumBalance){
@@ -16,6 +18,22 @@ public class BankAccount {
         return minimumBalance;
     }
 
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public String getHolderName() {
+        return holderName;
+    }
+
+    public void setHolderName(String holderName) {
+        this.holderName = holderName;
+    }
+
     public double withdraw(double amount){
         if((balance - amount) > minimumBalance){
             return balance -= amount;
@@ -24,7 +42,14 @@ public class BankAccount {
         }
     }
 
-    public double deposit(double amount){
+    public double deposit(double amount) {
+//        for testing assertTimeout
+//        try {
+//            Thread.sleep(5);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+
         return balance += amount;
     }
 }
